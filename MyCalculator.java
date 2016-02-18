@@ -3,6 +3,8 @@
  * Program Description: Calculator of Simple Mathematical Functions
 **/
 
+import java.util.Arrays;
+import java.util.HashMap;
 public class MyCalculator {
 	// add two numbers
 	public float add(float a,float b){
@@ -46,6 +48,13 @@ public class MyCalculator {
 	
 	// binary search in an array
 	int binarySearch(int[] a,int x){
+		//checks if sorted
+		for(int i = 0; i < a.length-1; i++){
+			if(a[i]>a[i+1]){
+				return -1;
+			}
+		}
+			
 		int n = a.length; // get number of elements in the array
 		int lower, upper, middle; // variables for positions in the array
 		lower = 0; upper = n-1; // initialize values of lower and upper points
@@ -57,7 +66,7 @@ public class MyCalculator {
 			else return middle;
 		}
 		
-		return 1;
+		return -1;
 	}
 	
 }
