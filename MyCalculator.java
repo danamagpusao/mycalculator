@@ -47,10 +47,10 @@ public class MyCalculator {
 	}
 	
 	// binary search in an array
-	int binarySearch(int[] a,int x){
+	int binarySearch(int[] a,int x){//1
 		//checks if sorted
-		for(int i = 0; i < a.length-1; i++){
-			if(a[i]>a[i+1]){
+		for(int i = 0; i < a.length-1; i++){ //2
+			if(a[i]>a[i+1]){ //3
 				return -1;
 			}
 		}
@@ -59,14 +59,14 @@ public class MyCalculator {
 		int lower, upper, middle; // variables for positions in the array
 		lower = 0; upper = n-1; // initialize values of lower and upper points
 		
-		while(lower<=upper){
+		while(lower<=upper){//4
 			middle = (lower+upper)/2;
-			if(x>a[middle]) lower = middle + 1;
-			else if(x<a[middle]) upper = middle - 1;
-			else return middle;
+			if(x>a[middle]) lower = middle + 1;//5
+			else if(x<a[middle]) upper = middle - 1;//6
+			else return middle;//7
 		}
 		
-		return -1;
+		return -1;//8
 	}
 	
 }

@@ -40,7 +40,6 @@ public class MyCalculatorTest {
 	}
 	
 
-
 	@Test
 	public void testBinarySearch1() {
 		MyCalculator calc = new MyCalculator();
@@ -70,6 +69,13 @@ public class MyCalculatorTest {
 		int[] arr = {9,4,2,3,1,6,7,3,5,8};
 		float actual = calc.binarySearch(arr,2);
 		assertEquals("{9,4,2,3,1,6,7,3,5,8} index of 2  = 2", actual, -1, 0.0); //return 2
+	}
+	
+	public void testBinarySearch1() {
+		MyCalculator calc = new MyCalculator();
+		int[] arr = {};
+		float actual = calc.binarySearch(arr,3);
+		assertEquals("{} index of 3 = -1", actual, -1, 0.0); //return -1
 	}
 	
 	
