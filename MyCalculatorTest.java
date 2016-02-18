@@ -15,8 +15,31 @@ public class MyCalculatorTest {
 	public void testNfactorial2() {
 		MyCalculator calc = new MyCalculator();
 		float actual = calc.nfactorial(-1);
-		assertEquals("(-1)! = undefined", actual, 1, 0.0);
+		assertEquals("(-1)! = 1", actual, 1, 0.0);
 	}
+	
+	@Test
+	public void testNfactorial3() {
+		MyCalculator calc = new MyCalculator();
+		float actual = calc.nfactorial(10);
+		assertEquals("10! = 3628800", actual,3628800 , 0.0);
+	}
+	
+	@Test
+	public void testNfactorial4() {
+		MyCalculator calc = new MyCalculator();
+		float actual = calc.nfactorial(1);
+		assertEquals("1! = 1", actual,1 , 0.0);
+	}
+	
+	@Test
+	public void testNfactorial5() {
+		MyCalculator calc = new MyCalculator();
+		float actual = calc.nfactorial(5);
+		assertEquals("5! = 120", actual,120 , 0.0);
+	}
+	
+
 
 	@Test
 	public void testBinarySearch1() {
